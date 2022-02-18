@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<ul>
+  <li><a class="active" href="https://webpage.publicaccount2.repl.co/">🍪</a></li>
+  <li><a href="/announcments.html">Announcments📣</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="/minecraft.html">Minecraft</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+<div style="padding:20px; margin-top:30px; background-color:#ADD8E6; height:1500px;">
+
+<button>Play</button>
+<script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://fix.publicaccount2.repl.co/?url=https://server.publicaccount2.repl.co/";
+
+    if (url) {
+        var win;
+
+        document.querySelector('button').onclick = function() {
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            document.querySelector('button').style.background='#ff5148';
+            document.querySelector('button').innerHTML="Game Loaded!";
+        };
+    }
+</script>
+
+<style>
+* {
+    color: white; 
+    font-family: arial;
+    text-align: center;
+}
+button {
+    width: 220px; 
+    height: 40px;
+    border-radius: 12px;
+    background-color: #1F51FF;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    transition: background-color 500ms;
+}
+button:hover {
+    background-color: #1F51FF;
+}
+</style>
+
+</body>
+</div>
+</html>
